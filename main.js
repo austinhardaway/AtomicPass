@@ -1,13 +1,18 @@
-const electron = require('electron');
-const app = electron.app;
-const BrowserWindow = electron.BrowserWindow;
+var electron =  require('electron');
 
-var mainWindow = null;
+const {app, BrowserWindow} = electron;
 
-app.on('ready', function(){
-  mainWindow = new BrowserWindow({
-    width:612,
-    height:384,
-  });
-  mainWindow.loadURL('file://${__dirname}/app/index.html');
-})
+app.on('ready', () => {
+
+  //win.webContents.openDevTools()
+  let login = new BrowserWindow({width:1000, height:300});
+  login.loadURL('file://' + __dirname + '/login.html');
+  login.webContents.openDevTools()
+});
+
+
+exports.successfulLogin = (login) => {
+  let win = new BrowserWindow({width:800, height: 600});
+  win.loadURL('file://' + __dirname + '/index.html');
+  login.close();
+}

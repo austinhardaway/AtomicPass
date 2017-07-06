@@ -1,14 +1,24 @@
 {
-	"name": "AtomicPassword",
-	"version" : "1.0.0",
-	"description" : "",
-	"main" : "main.js",
-	"scripts" : {
-		"start": "electron ."
-	},
-	"author" : "Austin Hardaway",
-	"license": "MIT",
-	"devDependencies" : {
-		"electron-prebuilt":"1.6.6"
-	}
+  "name": "atomicpass",
+  "version": "1.0.0",
+  "description": "Simple password manager",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "electron-prebuilt": "^1.4.13"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/austinhardaway/AtomicPass.git"
+  },
+  "author": "Austin Hardway",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/austinhardaway/AtomicPass/issues"
+  },
+  "homepage": "https://github.com/austinhardaway/AtomicPass#readme"
 }
