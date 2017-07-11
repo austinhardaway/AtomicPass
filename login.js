@@ -3,7 +3,7 @@ const remote = require('electron').remote;
 const main = remote.require('./main.js');
 
 let psw = document.createElement('input');
-psw.type = 'text';
+psw.type = 'password';
 psw.placeholder = 'Enter Password';
 psw.name = 'psw';
 psw.id = 'psw';
@@ -14,9 +14,10 @@ button.textContent = 'Login';
 button.type = 'submit';
 document.body.appendChild(button);
 
-let pass = "password";
+
+
 button.addEventListener('click', ()=> {
-  if(pass == psw.value){
+  if(main.pass == psw.value){
     main.successfulLogin(remote.getCurrentWindow());
   }
 });
